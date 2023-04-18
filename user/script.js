@@ -48,6 +48,7 @@ const getPostAuthor = async (id) => {
 };
 
 getPostAuthor(currentPostID).then((user) => {
+  document.title = user.name + " | BelkaBlog User";
   profileInfo.innerHTML = "";
 
   profileInfo.innerHTML = `

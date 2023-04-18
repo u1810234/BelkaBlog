@@ -71,6 +71,7 @@ const getPostComments = async (postID) => {
 };
 
 const fillContent = (contentAuthor, contentData) => {
+  document.title = contentData.title + " | BelkaBlog";
   pagePost.classList.add("page-post");
   pagePost.innerHTML = `
       <div class="page-post-header">
