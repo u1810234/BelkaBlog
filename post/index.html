@@ -4,9 +4,57 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Post Page</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="./script.js"></script>
   </head>
   <body>
-    Post Page
+    <header class="header">
+      <div class="header-image-link-container">
+        <a href="/" class="header-image-link">
+          <img
+            class="header-image"
+            src="./../assets/logo.svg"
+            alt="The blog logo"
+          />
+        </a>
+      </div>
+      <nav class="header-links-container">
+        <ul class="header-links-container-list">
+          <li class="header-link-container">
+            <a class="header-link" href="#">Link</a>
+          </li>
+          <li class="header-link-container">
+            <a class="header-link" href="#">Link</a>
+          </li>
+          <li class="header-link-container">
+            <a class="header-link" href="#">Link</a>
+          </li>
+          <li class="header-link-container">
+            <a class="header-link" href="#">Link</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="content">
+      <div class="content-main"></div>
+      <div id="comments-section">
+        <div class="comments-section-block">
+          <span class="comments-section-block-text"
+            >Adding comments is under development</span
+          >
+        </div>
+        <div id="comments-section-create">
+          <textarea
+            class="comments-section-create-input"
+            placeholder="Leave a comment..."
+          ></textarea>
+        </div>
+        <div id="comments-section-prev-comments">
+          <h3>Comments</h3>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
