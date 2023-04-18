@@ -101,181 +101,118 @@ a.header-link {
 
 .content-main {
   width: 100%;
+  padding-bottom: 15px;
   border-bottom: 1px solid var(--primal-black);
 }
 
-.page-post-header-text {
-  padding: 15px 0;
-}
-
-.page-post-header-author {
-  font-size: 13px;
-  line-height: 15px;
-  color: var(--secondary-black);
-}
-
-.page-post-content {
-  padding: 15px 0;
-  font-size: 18px;
-  line-height: 170%;
-  font-weight: 400;
-}
-
-.page-post-footer {
-  display: flex;
-  justify-content: space-between;
-  padding: 3% 0;
-}
-
-.post-action-icon svg {
-  width: 16px;
-  height: 20px;
-}
-
-.post-action-text {
-  margin-left: 5px;
-}
-
-.page-post-action {
-  display: flex;
-  font-size: 16px;
-  cursor: pointer;
-  margin-bottom: 15px;
-  color: #000;
-  text-decoration: none;
-}
-
-#comments-section {
-  margin-top: 35px;
-}
-
-.comments-section-block {
-  position: absolute;
-  height: 200px;
-  width: 80%;
-  z-index: 1;
-  background-color: var(--primal-gray);
-}
-
-.comments-section-create-input {
-  width: calc(100% - 34px);
-  min-height: 10rem;
-  resize: vertical;
-  padding: 8px 16px;
-}
-
-.comments-section-block {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#comments-section-prev-comments {
-  margin-top: 35px;
-}
-
-.comment {
+.profile-card {
   background-color: #fff;
-  padding: 1rem;
-  margin: 15px 0;
-  border-radius: 16px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
-.comment-header {
-  font-size: 12px;
-  font-weight: 600;
+.profile-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-.comment-body {
-  font-size: 14px;
-  font-weight: 400;
-  margin-top: 5px;
+.profile-image {
+  flex-shrink: 0;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 20px;
 }
 
-#snackbar {
-  visibility: hidden; /* Hidden by default. Visible on click */
-  min-width: 250px; /* Set a default minimum width */
-  margin-left: -125px; /*  Divide value of min-width by 2 */
-  background-color: #00dc7f; /* Black background color */
-  color: #fff; /* White text color */
-  text-align: center; /* Centered text */
-  border-radius: 4px; /* Rounded borders */
-  padding: 16px; /* Padding */
-  position: fixed; /* Sit on top of the screen */
-  z-index: 1; /* Add a z-index if needed */
-  left: 50%; /* Center the snackbar */
-  bottom: 30px; /* 30px from the bottom */
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-/* Show the snackbar when clicking on a button (class added with JavaScript) */
-#snackbar.show {
-  visibility: visible; /* Show the snackbar */
-  /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
-  However, delay the fade out process for 2.5 seconds */
-  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
-  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+.profile-info {
+  flex-grow: 1;
 }
 
-#snackbar.show.warning {
-  background-color: #f7b928;
+.profile-name {
+  font-size: 28px;
+  margin-bottom: 5px;
 }
 
-/* Animations to fade the snackbar in and out */
-@-webkit-keyframes fadein {
-  from {
-    bottom: 0;
-    opacity: 0;
-  }
-  to {
-    bottom: 30px;
-    opacity: 1;
-  }
+.profile-email {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 10px;
 }
 
-@keyframes fadein {
-  from {
-    bottom: 0;
-    opacity: 0;
-  }
-  to {
-    bottom: 30px;
-    opacity: 1;
-  }
+.profile-status {
+  font-size: 16px;
+  color: #ff4444;
 }
 
-@-webkit-keyframes fadeout {
-  from {
-    bottom: 30px;
-    opacity: 1;
-  }
-  to {
-    bottom: 0;
-    opacity: 0;
-  }
+.online {
+  color: #22bb33;
 }
 
-@keyframes fadeout {
-  from {
-    bottom: 30px;
-    opacity: 1;
+.profile-body {
+  margin-top: 20px;
+}
+
+.profile-bio {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Skeleton */
+.skeleton {
+  opacity: 0.7;
+  animation: skeleton-loading 1s linear infinite alternate;
+}
+
+.skeleton-text {
+  width: 100%;
+  height: 1rem;
+  margin-bottom: 0.25rem;
+  border-radius: 6px;
+}
+
+.skeleton-status {
+  width: 60px;
+}
+
+/* End of Skeleton */
+
+@keyframes skeleton-loading {
+  0% {
+    /* background-color: var(--secondary-grey); */
+    background-color: hsl(200, 20%, 70%);
   }
-  to {
-    bottom: 0;
-    opacity: 0;
+  100% {
+    /* background-color: var(--secondary-grey); */
+    background-color: hsl(200, 20%, 95%);
   }
 }
 
-@media screen and (max-width: 767px) {
-  .post-action-text {
-    display: none;
+@media (max-width: 600px) {
+  .profile-header {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
-  .comments-section-block {
-    width: 90%;
+  .profile-image {
+    width: 100%;
+    height: auto;
+    margin-right: 0;
+    margin-bottom: 10px;
   }
 
-  .comments-section-block-text {
-    font-size: 10px;
+  .profile-info {
+    margin-bottom: 10px;
   }
 }
 
@@ -353,11 +290,5 @@ a.header-link {
 
   .header .btn {
     display: block;
-  }
-
-  #snackbar {
-    left: 2.5%;
-    right: 2.5%;
-    margin-left: unset;
   }
 }

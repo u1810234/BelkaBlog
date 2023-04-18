@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Post Page</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>User Page</title>
+    <link rel="stylesheet" href="./styles.css" />
     <script defer src="./script.js"></script>
   </head>
   <body>
@@ -36,26 +36,27 @@
         </ul>
       </nav>
     </header>
-
     <section class="content">
-      <div class="content-main"></div>
-      <div id="comments-section">
-        <div class="comments-section-block">
-          <span class="comments-section-block-text"
-            >Adding comments is under development</span
-          >
-        </div>
-        <div id="comments-section-create">
-          <textarea
-            class="comments-section-create-input"
-            placeholder="Leave a comment..."
-          ></textarea>
-        </div>
-        <div id="comments-section-prev-comments">
-          <h3>Comments</h3>
+      <div class="content-main">
+        <div class="profile-card">
+          <div class="profile-header">
+            <div class="profile-image">
+              <img src="https://via.placeholder.com/150" alt="Profile Image" />
+            </div>
+            <div class="profile-info">
+              <h2 class="profile-name"></h2>
+              <p class="profile-email"></p>
+              <span class="profile-status"></span>
+            </div>
+          </div>
+          <div class="profile-body">
+            <p class="profile-bio">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
         </div>
       </div>
     </section>
-    <div id="snackbar"></div>
   </body>
 </html>
