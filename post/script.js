@@ -78,7 +78,7 @@ const fillContent = (contentAuthor, contentData) => {
               ${contentData.title}
           </h1>
   
-          <span class="page-post-header-author">${contentAuthor.name} · ${contentAuthor.status}</span>
+          <span class="page-post-header-author"> <a class="page-post-header-author" href=./../user/index.html?id=${contentAuthor.id}> ${contentAuthor.name}</a> · ${contentAuthor.status}</span>
       </div>
   
       <div class="page-post-content">

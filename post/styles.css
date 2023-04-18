@@ -112,6 +112,7 @@ a.header-link {
   font-size: 13px;
   line-height: 15px;
   color: var(--secondary-black);
+  text-decoration: none;
 }
 
 .page-post-content {
